@@ -1,20 +1,23 @@
+import { measure, once } from "helpful-decorators";
 
-
-class DateClass{
-private place :string
-    constructor(place : string){
-        this.place = place
+class DateClass {
+    private place: string;
+    
+    constructor(place: string) {
+        this.place = place;
     }
 
-   
-    getTime(){
-        console.log("get time called")
+   @measure 
+    getTime() {
+        console.log("get time called");
         return new Date().getTime();
     }
 }
 
- var d = new DateClass("India")
+const d = new DateClass("India");
 
- console.log(d.getTime())
- d.getTime()
- 
+console.log(d.getTime());
+console.log("hi " +d.getTime());
+console.log(d.getTime());
+console.log(d.getTime());
+
