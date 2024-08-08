@@ -1,10 +1,10 @@
 {
   "name": "todo-tsoa",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/todos/server.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/todos/server.js",
+     "build": "tsoa spec-and-routes && tsc",
+  "start": "node dist/todos/server.js",
     "tsoa-gen": "tsoa routes && tsoa swagger"
   },
   "keywords": [],
