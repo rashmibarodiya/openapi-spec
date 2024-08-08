@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "dist/todos/server.js",
   "scripts": {
-     "build": "tsoa spec-and-routes && tsc",
-  "start": "node dist/todos/server.js",
-    "tsoa-gen": "tsoa routes && tsoa swagger"
+    "build": "npx tsoa spec-and-routes && npx tsc",
+    "start": "node dist/todos/server.js",
+    "tsoa-gen": "npx tsoa routes && npx tsoa swagger"
   },
   "keywords": [],
   "author": "",
