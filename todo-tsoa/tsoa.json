@@ -1,12 +1,12 @@
 {
-    "entryFile": "src/todos/app.ts",
-    "noImplicitAdditionalProperties": "throw-on-extras",
-    "controllerPathGlobs": ["src/**/*Controller.ts"],
-    "spec": {
-      "outputDirectory": "dist",
-      "specVersion": 3
-    },
-    "routes": {
-      "routesDir": "dist"
-    }
+  "entryFile": "src/todos/server.ts",
+  "noImplicitAdditionalProperties": "throw-on-extras",
+  "controllerPathGlobs": ["src/**/*.ts"],
+  "spec": {
+    "outputDirectory": "dist",
+    "specVersion": 3
+  },
+  "routes": {
+    "routesDir": "dist"
   }
+}

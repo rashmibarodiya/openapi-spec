@@ -25,15 +25,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.app = void 0;
 const express_1 = __importStar(require("express"));
-const routes_1 = require("./routes");
 exports.app = (0, express_1.default)();
 exports.app.use((0, express_1.urlencoded)({
     extended: true
 }));
 exports.app.use((0, express_1.json)());
-(0, routes_1.RegisterRoutes)(exports.app);
-exports.app.listen(3000, () => {
-    console.log(`Server is running at http://localhost:${3000}`);
-});
 // It's important to export the app for testing purposes
 exports.default = exports.app;
