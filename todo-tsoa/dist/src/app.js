@@ -25,8 +25,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.app = void 0;
 const express_1 = __importStar(require("express"));
-//import { RegisterRoutes } from "./../routes";
-const { RegisterRoutes } = require('./../routes');
+//const { RegisterRoutes } = require('./../routes')
 exports.app = (0, express_1.default)();
 exports.app.use((0, express_1.urlencoded)({
     extended: true

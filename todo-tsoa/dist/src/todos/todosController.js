@@ -11,19 +11,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.todosController = void 0;
 const tsoa_1 = require("tsoa");
 const todoService_1 = require("./todoService");
 let todosController = class todosController extends tsoa_1.Controller {
-    async getTodo(id) {
-        let todoSer = new todoService_1.todoService();
-        return todoSer.get(id);
+    getTodo(id) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let todoSer = new todoService_1.todoService();
+            return todoSer.get(id);
+        });
     }
-    async createTodo(requestBody) {
-        this.setStatus(201);
-        new todoService_1.todoService().create(requestBody);
-        return;
+    createTodo(requestBody) {
+        return __awaiter(this, void 0, void 0, function* () {
+            this.setStatus(201);
+            new todoService_1.todoService().create(requestBody);
+            return;
+        });
     }
 };
 exports.todosController = todosController;

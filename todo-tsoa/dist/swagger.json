@@ -57,7 +57,7 @@
 		"title": "todo-tsoa",
 		"version": "1.0.0",
 		"license": {
-			"name": "ISC"
+			"name": "MIT"
 		},
 		"contact": {}
 	},

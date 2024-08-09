@@ -6,16 +6,16 @@ class todoService {
         return {
             id: id,
             title: "cook",
-            description: "dinner at 8",
-            done: false
+            done: false,
+            description: "dinner at 8"
         };
     }
     create(todoCreateParams) {
         return {
             id: "1",
             title: "Creting todo",
-            description: "creating des of todo",
-            done: true
+            done: true,
+            description: "creating des of todo"
         };
     }
 }
