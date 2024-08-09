@@ -1,11 +1,11 @@
 {
   "name": "todo-tsoa",
   "version": "1.0.0",
- "main": "build/src/server.js",
-"scripts": {
-  "build": "tsoa spec-and-routes && tsc",
-  "start": "node dist/src/server.js"
-},
+  "main": "build/src/server.js",
+  "scripts": {
+    "build": "tsoa spec-and-routes && tsc",
+    "start": "node dist/src/server.js"
+  },
   "license": "MIT",
   "dependencies": {
     "express": "^4.19.2",

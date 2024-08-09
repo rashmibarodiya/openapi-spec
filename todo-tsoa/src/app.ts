@@ -1,5 +1,5 @@
 import express, {json, urlencoded } from "express"
-import { RegisterRoutes } from "./routes";
+import { RegisterRoutes } from "../dist/routes";
 //const { RegisterRoutes } = require('./../routes')
 
 export const app = express()

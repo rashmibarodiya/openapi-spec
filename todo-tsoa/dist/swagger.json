@@ -30,25 +30,6 @@
 				],
 				"type": "object",
 				"additionalProperties": false
-			},
-			"Pick_Todo.title-or-description_": {
-				"properties": {
-					"title": {
-						"type": "string"
-					},
-					"description": {
-						"type": "string"
-					}
-				},
-				"required": [
-					"title",
-					"description"
-				],
-				"type": "object",
-				"description": "From T, pick a set of properties whose keys are in the union K"
-			},
-			"todoCreateParams": {
-				"$ref": "#/components/schemas/Pick_Todo.title-or-description_"
 			}
 		},
 		"securitySchemes": {}
@@ -62,7 +43,7 @@
 		"contact": {}
 	},
 	"paths": {
-		"/todos/{id}": {
+		"/todo/{todoId}": {
 			"get": {
 				"operationId": "GetTodo",
 				"responses": {
@@ -81,35 +62,13 @@
 				"parameters": [
 					{
 						"in": "path",
-						"name": "id",
+						"name": "todoId",
 						"required": true,
 						"schema": {
 							"type": "string"
 						}
 					}
 				]
-			}
-		},
-		"/todos": {
-			"post": {
-				"operationId": "CreateTodo",
-				"responses": {
-					"201": {
-						"description": "Created"
-					}
-				},
-				"security": [],
-				"parameters": [],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"$ref": "#/components/schemas/todoCreateParams"
-							}
-						}
-					}
-				}
 			}
 		}
 	},

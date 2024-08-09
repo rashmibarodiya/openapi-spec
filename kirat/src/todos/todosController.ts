@@ -19,7 +19,7 @@ export class todosController extends Controller {
     public async createTodo(
         @Body() requestBody: todoCreateParams
     ) : Promise<void>{
-        this.setStatus(201);
+        // this.setStatus(201);
         new todoService().create(requestBody)
         return
     }

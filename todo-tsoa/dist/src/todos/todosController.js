@@ -21,40 +21,25 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.todosController = void 0;
+exports.TodoController = void 0;
 const tsoa_1 = require("tsoa");
 const todoService_1 = require("./todoService");
-let todosController = class todosController extends tsoa_1.Controller {
-    getTodo(id) {
+let TodoController = class TodoController extends tsoa_1.Controller {
+    getTodo(todoId) {
         return __awaiter(this, void 0, void 0, function* () {
-            let todoSer = new todoService_1.todoService();
-            return todoSer.get(id);
-        });
-    }
-    createTodo(requestBody) {
-        return __awaiter(this, void 0, void 0, function* () {
-            this.setStatus(201);
-            new todoService_1.todoService().create(requestBody);
-            return;
+            let ts = new todoService_1.todoService();
+            return ts.get(todoId);
         });
     }
 };
-exports.todosController = todosController;
+exports.TodoController = TodoController;
 __decorate([
-    (0, tsoa_1.Get)("{id}"),
+    (0, tsoa_1.Get)("{todoId}"),
     __param(0, (0, tsoa_1.Path)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
-], todosController.prototype, "getTodo", null);
-__decorate([
-    (0, tsoa_1.SuccessResponse)("201", "Created"),
-    (0, tsoa_1.Post)(),
-    __param(0, (0, tsoa_1.Body)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", Promise)
-], todosController.prototype, "createTodo", null);
-exports.todosController = todosController = __decorate([
-    (0, tsoa_1.Route)("todos") //only todos were missing from here in past 
-], todosController);
+], TodoController.prototype, "getTodo", null);
+exports.TodoController = TodoController = __decorate([
+    (0, tsoa_1.Route)("todo")
+], TodoController);
