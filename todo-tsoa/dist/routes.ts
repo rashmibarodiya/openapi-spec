@@ -39,13 +39,12 @@ export function RegisterRoutes(app: Router) {
 
 
     
-        app.get('/todo/:todoId',
+        app.get('/tod',
             ...(fetchMiddlewares<RequestHandler>(TodoController)),
             ...(fetchMiddlewares<RequestHandler>(TodoController.prototype.getTodo)),
 
             async function TodoController_getTodo(request: ExRequest, response: ExResponse, next: any) {
             const args: Record<string, TsoaRoute.ParameterSchema> = {
-                    todoId: {"in":"path","name":"todoId","required":true,"dataType":"string"},
             };
 
             // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa

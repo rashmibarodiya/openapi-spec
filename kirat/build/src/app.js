@@ -24,11 +24,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.app = void 0;
+// src/app.ts
 const express_1 = __importStar(require("express"));
+const routes_1 = require("../build/routes");
 exports.app = (0, express_1.default)();
+// Use body parser to read sent json payloads
 exports.app.use((0, express_1.urlencoded)({
-    extended: true
+    extended: true,
 }));
 exports.app.use((0, express_1.json)());
-// It's important to export the app for testing purposes
-exports.default = exports.app;
+(0, routes_1.RegisterRoutes)(exports.app);

@@ -1,25 +1,23 @@
-import Todo from "./todo";
+import { Todo } from "./todo";
 
+export type TodoCreationParams = Pick<Todo, "title" | "description">
 
-export type todoCreateParams = Pick<Todo, "title" | "description">
-
-export class todoService {
-
-    public get(id: string): Todo {
+export class TodoService {
+    public get(todoId: string): Todo {
         return {
-            id: id,
-            title: "cook",
-            description: "dinner at 8",
+            id: todoId,
+            title: "mocked todo",
+            description: "mocked todo",
             done: false
         }
     }
-
-    public create(todoCreateParams : todoCreateParams):Todo{
-        return{
-            id : "1",
-            title : "Creting todo",
-            description: "creating des of todo",
-            done : true
+    public create(todoCreationParams: TodoCreationParams): Todo {
+        console.log("mock db call");
+        return {
+            id: "1",
+            title: "mocked todo",
+            description: "mocked todo",
+            done: false
         }
     }
 }

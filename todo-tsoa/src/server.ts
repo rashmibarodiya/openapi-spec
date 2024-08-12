@@ -1,9 +1,5 @@
 
-import app from "./app"
-//const { RegisterRoutes } = require('../routes'); // Import the routes from dist
-
-
-
+import {app} from "./app"
 const port = 3000
 
 app.listen(`${port}` , () => {

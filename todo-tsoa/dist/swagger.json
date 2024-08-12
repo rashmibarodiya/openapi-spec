@@ -43,7 +43,7 @@
 		"contact": {}
 	},
 	"paths": {
-		"/todo/{todoId}": {
+		"/tod": {
 			"get": {
 				"operationId": "GetTodo",
 				"responses": {
@@ -59,16 +59,7 @@
 					}
 				},
 				"security": [],
-				"parameters": [
-					{
-						"in": "path",
-						"name": "todoId",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				]
+				"parameters": []
 			}
 		}
 	},

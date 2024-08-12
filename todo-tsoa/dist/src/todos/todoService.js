@@ -2,9 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.todoService = void 0;
 class todoService {
-    get(id) {
+    //public get(id: string): Todo {
+    get() {
         return {
-            id: id,
+            id: "1",
             title: "cook",
             done: false,
             description: "dinner at 8"

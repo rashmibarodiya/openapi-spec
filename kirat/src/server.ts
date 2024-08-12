@@ -1,11 +1,8 @@
+// src/server.ts
+import { app } from "./app";
 
-import app from "./app"
-//const { RegisterRoutes } = require('../routes'); // Import the routes from dist
+const port =  3000;
 
-
-
-const port = 3000
-
-app.listen(`${port}` , () => {
-    console.log("app is running on port "+ `${port}`)
-})
+app.listen(port, () =>
+  console.log(`Example app listening at http://localhost:${port}`)
+);

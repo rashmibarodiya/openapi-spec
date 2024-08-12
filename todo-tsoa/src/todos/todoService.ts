@@ -5,9 +5,10 @@ export type todoCreateParams = Pick<Todo, "title" | "description">
 
 export class todoService {
 
-    public get(id: string): Todo {
+    //public get(id: string): Todo {
+        public get(): Todo {
         return {
-            id: id,
+            id: "1",
             title: "cook",
             done: false,
             description: "dinner at 8"

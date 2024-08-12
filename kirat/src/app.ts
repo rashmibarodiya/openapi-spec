@@ -1,15 +1,15 @@
-import express, {json, urlencoded } from "express"
-//import { RegisterRoutes } from "./../routes";
+// src/app.ts
+import express, {json, urlencoded} from "express";
 import { RegisterRoutes } from "../build/routes";
 
-export const app = express()
+export const app = express();
 
-app.use(urlencoded({
-    extended : true
-}))
+// Use body parser to read sent json payloads
+app.use(
+  urlencoded({
+    extended: true,
+  })
+);
+app.use(json());
 
-app.use(json())
-
-
-  // It's important to export the app for testing purposes
-  export default app;
+RegisterRoutes(app);

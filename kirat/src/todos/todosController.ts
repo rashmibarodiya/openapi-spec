@@ -1,26 +1,25 @@
-import { Body, Controller, Get, Path, Post, Route, SuccessResponse } from "tsoa";
+import {
+    Body,
+    Controller,
+    Get,
+    Path,
+    Post,
+    Query,
+    Route,
+    SuccessResponse,
+} from "tsoa";
+import {Todo} from "./todo"
+import { TodoCreationParams, TodoService } from "./todoService";
 
-import Todo from "./todo"
-import { todoCreateParams, todoService } from "./todoService"
-
-@Route("todos") //only todos were missing from here in past 
-export class todosController extends Controller {
-    @Get("{id}")
+@Route("todo")
+export class TodoController extends Controller {
+    @Get("{todoId}")
     public async getTodo(
-        @Path() id: string
+        @Path() todoId: string
     ): Promise<Todo> {
-        let todoSer = new todoService()
-        return todoSer.get(id)
+        let todoService = new TodoService();
+        return todoService.get(todoId)
     }
 
-
-    @SuccessResponse("201", "Created") 
-    @Post()
-    public async createTodo(
-        @Body() requestBody: todoCreateParams
-    ) : Promise<void>{
-        // this.setStatus(201);
-        new todoService().create(requestBody)
-        return
-    }
+    
 }

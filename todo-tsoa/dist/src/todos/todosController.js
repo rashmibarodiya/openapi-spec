@@ -8,9 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -23,23 +20,30 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TodoController = void 0;
 const tsoa_1 = require("tsoa");
-const todoService_1 = require("./todoService");
+//import { todoCreateParams, todoService } from "./todoService";
 let TodoController = class TodoController extends tsoa_1.Controller {
-    getTodo(todoId) {
+    //@Get("{todoId})
+    getTodo(
+    // @Path() todoId: string
+    ) {
         return __awaiter(this, void 0, void 0, function* () {
-            let ts = new todoService_1.todoService();
-            return ts.get(todoId);
+            // let ts = new todoService();
+            return {
+                title: "mytodo",
+                description: "mydescription",
+                done: true,
+                id: "4"
+            };
         });
     }
 };
 exports.TodoController = TodoController;
 __decorate([
-    (0, tsoa_1.Get)("{todoId}"),
-    __param(0, (0, tsoa_1.Path)()),
+    (0, tsoa_1.Get)(),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], TodoController.prototype, "getTodo", null);
 exports.TodoController = TodoController = __decorate([
-    (0, tsoa_1.Route)("todo")
+    (0, tsoa_1.Route)("tod")
 ], TodoController);

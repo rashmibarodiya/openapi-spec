@@ -1,22 +1,23 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.todoService = void 0;
-class todoService {
-    get(id) {
+exports.TodoService = void 0;
+class TodoService {
+    get(todoId) {
         return {
-            id: id,
-            title: "cook",
-            description: "dinner at 8",
+            id: todoId,
+            title: "mocked todo",
+            description: "mocked todo",
             done: false
         };
     }
-    create(todoCreateParams) {
+    create(todoCreationParams) {
+        console.log("mock db call");
         return {
             id: "1",
-            title: "Creting todo",
-            description: "creating des of todo",
-            done: true
+            title: "mocked todo",
+            description: "mocked todo",
+            done: false
         };
     }
 }
-exports.todoService = todoService;
+exports.TodoService = TodoService;

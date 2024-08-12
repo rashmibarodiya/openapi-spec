@@ -37,11 +37,9 @@ function RegisterRoutes(app) {
     //  NOTE: If you do not see routes for all of your controllers in this file, then you might not have informed tsoa of where to look
     //      Please look into the "controllerPathGlobs" config option described in the readme: https://github.com/lukeautry/tsoa
     // ###########################################################################################################
-    app.get('/todo/:todoId', ...((0, runtime_1.fetchMiddlewares)(todosController_1.TodoController)), ...((0, runtime_1.fetchMiddlewares)(todosController_1.TodoController.prototype.getTodo)), function TodoController_getTodo(request, response, next) {
+    app.get('/tod', ...((0, runtime_1.fetchMiddlewares)(todosController_1.TodoController)), ...((0, runtime_1.fetchMiddlewares)(todosController_1.TodoController.prototype.getTodo)), function TodoController_getTodo(request, response, next) {
         return __awaiter(this, void 0, void 0, function* () {
-            const args = {
-                todoId: { "in": "path", "name": "todoId", "required": true, "dataType": "string" },
-            };
+            const args = {};
             // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
             let validatedArgs = [];
             try {

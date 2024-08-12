@@ -25,11 +25,11 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.app = void 0;
 const express_1 = __importStar(require("express"));
-//const { RegisterRoutes } = require('./../routes')
+const routes_1 = require("../dist/routes");
 exports.app = (0, express_1.default)();
 exports.app.use((0, express_1.urlencoded)({
     extended: true
 }));
 exports.app.use((0, express_1.json)());
+(0, routes_1.RegisterRoutes)(exports.app);
 // It's important to export the app for testing purposes
-exports.default = exports.app;
