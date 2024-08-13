@@ -34,9 +34,7 @@ let TodoController = class TodoController extends tsoa_1.Controller {
 };
 exports.TodoController = TodoController;
 __decorate([
-    (0, tsoa_1.Get)("{todoId}")
-    //     @Get()
-    ,
+    (0, tsoa_1.Get)("{todoId}"),
     __param(0, (0, tsoa_1.Path)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
