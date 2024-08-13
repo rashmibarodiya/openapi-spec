@@ -8,24 +8,16 @@ import {
     Route,
     SuccessResponse,
 } from "tsoa";
-import Todo from "./todo"
-//import { todoCreateParams, todoService } from "./todoService";
+import {Todo} from "./todo"
+import { todoCreateParams, todoService } from "./todoService";
 
-@Route("tod")
+@Route("todo")
 export class TodoController extends Controller {
-    //@Get("{todoId})
-         @Get()
+    @Get("{todoId}")
     public async getTodo(
-        // @Path() todoId: string
+         @Path() todoId: string
     ): Promise<Todo> {
-       // let ts = new todoService();
-        return {
-            title : "mytodo",
-            description : "mydescription",
-            done : true,
-            id: "4"
-        }
+        let ts = new todoService();
+        return ts.get(todoId);
     }
-
-    
 }

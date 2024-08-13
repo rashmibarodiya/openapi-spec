@@ -12,5 +12,4 @@ app.use(
 app.use(json())
 
 RegisterRoutes(app)
-  // It's important to export the app for testing purposes
   

@@ -1,21 +1,22 @@
 "use strict";
-// import {Todo} from "./todo";
-// export type todoCreateParams = Pick<Todo, "title" | "description">
-// export class todoService {
-//     public get(id: string): Todo {
-//         return {
-//             title: "cook",
-//             description: "dinner at 8",
-//             done: false,
-//             id: "1"
-//         }
-//     }
-//     public create(todoCreateParams : todoCreateParams):Todo{
-//         return{
-//             title : "Creting todo",
-//             description: "creating des of todo",
-//             done : true,
-//             id : "1",
-//         }
-//     }
-// }
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.todoService = void 0;
+class todoService {
+    get(id) {
+        return {
+            title: "cook",
+            description: "dinner at 8",
+            done: false,
+            id: "1"
+        };
+    }
+    create(todoCreateParams) {
+        return {
+            title: "Creting todo",
+            description: "creating des of todo",
+            done: true,
+            id: "1",
+        };
+    }
+}
+exports.todoService = todoService;

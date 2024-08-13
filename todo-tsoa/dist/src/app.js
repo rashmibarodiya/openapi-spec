@@ -32,4 +32,3 @@ exports.app.use((0, express_1.urlencoded)({
 }));
 exports.app.use((0, express_1.json)());
 (0, routes_1.RegisterRoutes)(exports.app);
-// It's important to export the app for testing purposes
